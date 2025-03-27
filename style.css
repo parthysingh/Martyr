@@ -75,9 +75,6 @@ header {
     background-color: #0056b3;
     width: 100%;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: sticky; /* Add this line */
-    top: 0; /* Add this line to make it stick to the top */
-    z-index: 1000; /* Add this line to ensure it stays above other content */
 }
 
 .nav-container {
