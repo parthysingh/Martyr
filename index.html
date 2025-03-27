@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="style.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gujarat Police Martyrs Memorial</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for admin section */
+        #admin-section {
+            display: none;
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        #admin-section input, 
+        #admin-section textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+        }
+        #admin-login {
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        /* New styles for logo links */
+        .logo-link {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .logo-link:hover {
+            transform: scale(1.1);
+        }
+        .logo-link img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-left">
+                <a href="https://rru.ac.in/" target="_blank" class="logo-link">
+                    <img src="https://isacfoundation.org/wp-content/uploads/2021/07/RRU-Logo.png" alt="RRU Logo">
+                </a>
+            </div>
+            <div class="header-content">
+                <h1>Gujarat Police Martyrs Memorial</h1>
+                <p>Honoring the Brave Souls Who Sacrificed for the Nation</p>
+            </div>
+            <div class="logo-right">
+                <a href="https://police.gujarat.gov.in/dgp/default.aspx" target="_blank" class="logo-link">
+                    <img src="https://th.bing.com/th/id/R.3ee7ed3c7f97ace646d6a9b345e316ca?rik=h0XkhKazjkCCkA&riu=http%3a%2f%2fwww.iceonline.in%2fupload%2fnewsAndUpdate%2fGujarat_Police_Logo_rGH1600092629.png&ehk=w439tbBR3f0hwu%2bixs9vI%2baCn%2b2tc%2bvaCh8vV1x1TiI%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1" alt="Gujarat Police Logo">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Rest of the HTML remains the same as in the original document -->
+    <nav class="main-navigation">
+        <div class="nav-container">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#martyr-tribute">Martyr Tribute</a></li>
+                <li><a href="#memorial-gallery">Memorial Gallery</a></li>
+                <li><a href="#commemorative-events">Commemorative Events</a></li>
+                <li><a href="#support-families">Support Martyr Families</a></li>
+                <li><a href="#" onclick="toggleAdminPanel()">Admin Panel</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="banner" id="home">
+        <img src="https://cmogujarat.gov.in/sites/default/files/2023-12/policemartyrsday-nth.jpg" alt="Police Martyrs Day Banner" width="100%" height="300">
+    </div>
+
+    <div class="search-container">
+        <input type="text" id="name-search" placeholder="Search by Name" aria-label="Search by Name">
+        <input type="text" id="year-search" placeholder="Search by Martyrdom Year" aria-label="Search by Martyrdom Year">
+        <input type="text" id="org-search" placeholder="Search by Organisation" aria-label="Search by Organisation">
+        <button aria-label="Perform Search">Search</button>
+    </div>
+
+    <section id="martyr-tribute">
+        <h2>Martyr Tributes</h2>
+        <div class="martyr">
+            <img src="https://www.police.gov.in/sites/default/files/upload/files/martyres_image/arjunshinh.JPG" alt="SHRI ARJUNSINH K. VALA">
+            <div class="details">
+                <h3>SHRI ARJUNSINH K. VALA</h3>
+                <p><strong>Incident:</strong> While on duty, he tried to stop a vehicle carrying illicit liquor at Shamlaji. The driver of the vehicle hit PSI Arjunsinh on the road, and he succumbed to his injuries.</p>
+                <p><strong>Martyrdom Year:</strong> 2024</p>
+                <p><strong>Organization:</strong> Gujarat Police</p>
+                <p><strong>Rank:</strong> Police Sub-Inspector (PSI)</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="memorial-gallery">
+        <h2>Memorial Gallery</h2>
+        <div class="gallery-grid">
+            <img src=https://bilkulonline.com/wp-content/uploads/2024/10/DSC1563-scaled-e1729512234576.jpg " alt="Memorial Image 1">
+            <img src="https://bilkulonline.com/wp-content/uploads/2024/10/DSC1446-300x200.jpg " alt="Memorial Image 2">
+            <img src="https://images.bhaskarassets.com/web2images/960/2021/10/21/img-20211021-wa0093_1634818778.jpg" alt="Memorial Image 3">
+        
+        </div>
+        <br>
+        <p>Images of martyrs and historical moments of valour</p>
+    </section>
+    
+    
+
+    <section id="commemorative-events">
+        <h2>Commemorative Events</h2>
+        <div class="events-list">
+            <div class="event">
+                <h3>Annual Martyr's Day Ceremony</h3>
+                <p>Date: October 21, 2024</p>
+                <p>Location: Gujarat Police Headquarters, Gandhinagar</p>
+            </div>
+            <div class="event">
+                <h3>Memorial Wreath Laying</h3>
+                <p>Date: January 15, 2025</p>
+                <p>Location: State Police Memorial Ground</p>
+            </div>
+        </div>
+    </section>
+
+<section id="support-families">
+    <h2>Support Martyr Families</h2>
+    <p>Help us support the families of our brave martyrs.</p>
+    <button class="support-button" onclick="window.location.href='https://parthysingh.github.io/Martyr-Donation/'">
+        Donate
+    </button>
+</section>
+
+<style>
+    .support-button {
+        background-color: red;
+        color: white;
+        font-size: 1.2rem;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        margin-top: 10px; /* Reduced gap */
+    }
+
+    .support-button:hover {
+        background-color: darkred;
+        transform: scale(1.1);
+    }
+</style>
+
+    <section id="admin-section">
+        <h2>Admin Panel</h2>
+        
+        <div id="admin-login">
+            <h3>Admin Login</h3>
+            <input type="text" id="admin-username" placeholder="Username" required>
+            <input type="password" id="admin-password" placeholder="Password" required>
+            <button onclick="adminLogin()">Login</button>
+        </div>
+
+        <div id="add-martyr-form" style="display: none;">
+            <h3>Add New Martyr Details</h3>
+            <form id="martyr-details-form">
+                <input type="text" id="martyr-name" placeholder="Martyr Name" required>
+                <textarea id="martyr-incident" placeholder="Incident Details" required></textarea>
+                <input type="number" id="martyrdom-year" placeholder="Martyrdom Year" required>
+                <input type="text" id="organization" placeholder="Organization" required>
+                <input type="text" id="rank" placeholder="Rank" required>
+                <input type="text" id="martyr-image-url" placeholder="Image URL">
+                <button type="submit">Add Martyr</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2024 Gujarat Police Martyrs Memorial</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Function to toggle admin panel visibility
+        function toggleAdminPanel() {
+            const adminSection = document.getElementById('admin-section');
+            if (adminSection.style.display === 'block') {
+                adminSection.style.display = 'none';
+            } else {
+                adminSection.style.display = 'block';
+            }
+        }
+
+        // Admin login function
+        function adminLogin() {
+            const username = document.getElementById('admin-username').value;
+            const password = document.getElementById('admin-password').value;
+            
+            // Hardcoded admin credentials (replace with secure authentication in production)
+            if (username === 'admin' && password === 'gujarat2024') {
+                document.getElementById('admin-login').style.display = 'none';
+                document.getElementById('add-martyr-form').style.display = 'block';
+            } else {
+                alert('Invalid credentials');
+            }
+        }
+
+        // Handle form submission for adding a new martyr
+        document.getElementById('martyr-details-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect form data
+            const martyrName = document.getElementById('martyr-name').value;
+            const incident = document.getElementById('martyr-incident').value;
+            const martyrdomYear = document.getElementById('martyrdom-year').value;
+            const organization = document.getElementById('organization').value;
+            const rank = document.getElementById('rank').value;
+            const imageUrl = document.getElementById('martyr-image-url').value;
+
+            // In a real application, this would send data to a backend server
+            // For this example, we'll create a new martyr div and append it
+            const martyrTributeSection = document.getElementById('martyr-tribute');
+            const newMartyrDiv = document.createElement('div');
+            newMartyrDiv.className = 'martyr';
+            newMartyrDiv.innerHTML = `
+                <img src="${imageUrl || 'https://www.police.gov.in/sites/default/files/upload/files/martyres_image/default.jpg'}" alt="${martyrName}">
+                <div class="details">
+                    <h3>${martyrName}</h3>
+                    <p><strong>Incident:</strong> ${incident}</p>
+                    <p><strong>Martyrdom Year:</strong> ${martyrdomYear}</p>
+                    <p><strong>Organization:</strong> ${organization}</p>
+                    <p><strong>Rank:</strong> ${rank}</p>
+                </div>
+            `;
+
+            martyrTributeSection.appendChild(newMartyrDiv);
+
+            // Reset form
+            this.reset();
+            alert('Martyr details added successfully!');
+        });
+    </script>
+</body>
+</html>
